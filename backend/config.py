@@ -1,7 +1,11 @@
 import os
 from pathlib import Path
 
+from dotenv import load_dotenv
+
 BACKEND_DIR = Path(__file__).resolve().parent
+load_dotenv(BACKEND_DIR / ".env")
+
 DATA_DIR = BACKEND_DIR / "data"
 FACE_DIR = DATA_DIR / "faces"
 DB_PATH = DATA_DIR / "app.db"
